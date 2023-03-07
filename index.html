@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jim Button</title>
+	<style>
+		h1 {
+			color: yellow;
+			text-align: center;
+			background-color: black;
+		}
+		body {
+			background-color: grey;
+		}
+		button {
+			display: block;
+			margin: 0 auto 50px;
+			padding: 20px;
+			font-size: 30px;
+			border: none;
+			background-color: #000;
+			color: #fff;
+			text-shadow: 0px 0px 10px #fff;
+			transition: all 0.5s;
+		}
+		button:hover {
+			box-shadow: 0px 0px 20px #fff;
+			text-shadow: 0px 0px 20px #fff;
+		}
+		#counter {
+			text-align: center;
+			font-size: 24px;
+			margin-top: 50px;
+		}
+		#gif {
+			display: block;
+			margin: 0 auto;
+			max-width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Jim Button</h1>
+	<button id="jim-button" onclick="playAudio()">Jim</button>
+	<div id="counter">0</div>
+	<audio id="jim-audio" src="jim.mp3"></audio>
+	<img id="gif" src="./bread-spin.gif" alt="Jim GIF">
+	<script>
+		var counter = 0;
+		function playAudio() {
+			var audio = document.getElementById("jim-audio");
+			audio.play();
+			counter++;
+			document.getElementById("counter").innerHTML = counter;
+		}
+	</script>
+</body>
+</html>
